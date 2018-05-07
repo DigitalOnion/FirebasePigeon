@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "121203025279",
+    "firebase_url": "https://digital-onion-pigeon.firebaseio.com",
+    "project_id": "digital-onion-pigeon",
+    "storage_bucket": "digital-onion-pigeon.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:121203025279:android:0d46accb1b4cb97b",
+        "android_client_info": {
+          "package_name": "com.outerspace.firebasepigeon"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "121203025279-t550jldii21r575be2o7dc6ptuv1jvks.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUwK33M7BGnIHXz2Zg_NE1fjD11CUsumY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
