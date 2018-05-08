@@ -5,6 +5,10 @@
     <string name="preferences_key">FirebasePigeonPreferences</string>
     <string name="instance_id_token_key">instanceIdToken</string>
 
+    <string name="channel_id">firebase_pigeon_channel_id</string>
+    <string name="channel_name">Firebase Pigeon Channel</string>
+    <string name="channel_description">Notification channel for the FirebasePigeon practice app</string>
+
     <string name="intro">Practice app for Firebase Messaging Service.</string>
     <string name="btn_show_token">Show Token</string>
     <string name="fb_instance_key">Firebase Instance Key</string>
