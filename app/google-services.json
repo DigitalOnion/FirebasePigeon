@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "121203025279-ogjrlvq1j5tbrsu1migcggltjsa0il6o.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.outerspace.firebasepigeon",
+            "certificate_hash": "2b2724aa23a99ce94a053acff8f63011047ae8a6"
+          }
+        },
+        {
           "client_id": "121203025279-t550jldii21r575be2o7dc6ptuv1jvks.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -29,8 +37,13 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "121203025279-t550jldii21r575be2o7dc6ptuv1jvks.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
           "status": 2
