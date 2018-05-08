@@ -13,4 +13,7 @@
     <string name="btn_show_token">Show Token</string>
     <string name="fb_instance_key">Firebase Instance Key</string>
     <string name="no_key_found">No Firebase instance key found</string>
+
+    <string name="notification_title">Wisdom quote</string>
+    <string name="notification_text">I am righ here, watching the wheels go round and round...</string>
 </resources>

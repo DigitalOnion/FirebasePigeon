@@ -1,7 +1,13 @@
 package com.outerspace.firebasepigeon;
 
+import java.util.Locale;
+
+import android.content.BroadcastReceiver;
 import android.content.Context;
+import android.content.IntentFilter;
 import android.content.SharedPreferences;
+import android.net.ConnectivityManager;
+import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,10 +15,27 @@ import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
+    private PigeonBroadcastReceiver pigeonBR;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        pigeonBR = new PigeonBroadcastReceiver();
+        IntentFilter filter = new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION);
+        filter.addAction(PigeonBroadcastReceiver.ACTION_GET_NOTIFICATION);
+        LocalBroadcastManager
+                .getInstance(getApplicationContext())
+                .registerReceiver(pigeonBR, filter);
+    }
+
+    @Override
+    protected void onDestroy() {
+        LocalBroadcastManager
+                .getInstance(getApplicationContext())
+                .unregisterReceiver(pigeonBR);
+        super.onDestroy();
     }
 
     // UI Callbacks...
