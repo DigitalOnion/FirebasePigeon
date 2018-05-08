@@ -7,17 +7,14 @@ import android.content.Context;
 import android.content.SharedPreferences;
 
 public class InstanceIdService extends FirebaseInstanceIdService {
-    private Context context;
 
     public InstanceIdService() { }
-
-    public InstanceIdService(Context context) {
-        this.context = context;
-    }
 
     @Override
     public void onTokenRefresh() {
         String refreshedToken = FirebaseInstanceId.getInstance().getToken();
+
+        Context context = getApplicationContext();
 
         String preferencesKey = context.getString(R.string.preferences_key);
         String instanceIdKey = context.getString(R.string.instance_id_token_key);
@@ -26,5 +23,6 @@ public class InstanceIdService extends FirebaseInstanceIdService {
                 preferencesKey, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = preferences.edit();
         editor.putString(instanceIdKey, refreshedToken);
+        editor.apply();
     }
 }

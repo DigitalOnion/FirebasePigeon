@@ -1,6 +1,12 @@
 <resources>
     <string name="app_name">FirebasePigeon</string>
     <string name="app_label">Firebase Messaging practice - Luis Virueña</string>
+
     <string name="preferences_key">FirebasePigeonPreferences</string>
     <string name="instance_id_token_key">instanceIdToken</string>
+
+    <string name="intro">Practice app for Firebase Messaging Service.</string>
+    <string name="btn_show_token">Show Token</string>
+    <string name="fb_instance_key">Firebase Instance Key</string>
+    <string name="no_key_found">No Firebase instance key found</string>
 </resources>
