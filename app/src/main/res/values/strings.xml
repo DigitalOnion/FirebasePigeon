@@ -9,11 +9,30 @@
     <string name="channel_name">Firebase Pigeon Channel</string>
     <string name="channel_description">Notification channel for the FirebasePigeon practice app</string>
 
-    <string name="intro">Practice app for Firebase Messaging Service.</string>
+    <string name="intro">Practice app for \nFirebase Messaging Service.</string>
     <string name="btn_show_token">Show Token</string>
     <string name="btn_test">Test it!</string>
     <string name="fb_instance_key">Firebase Instance Key</string>
     <string name="no_key_found">No Firebase instance key found</string>
+
+    <string name="desc_title">Firebase Messaging</string>
+    <string name="css_styles">
+        h1 {color:blue; font-size:140%;}
+        p  {font-size:120%;}
+    </string>
+    <string name="desc_1">This app is a demo for Firebase Messaging Services (FMS).
+        At the Google Firebase Console, I created the "FirebasePigeon" application.
+        Then I enabled this app to receive *Cloud Messages* from it.
+    </string>
+    <string name="desc_2">
+        \n* Open the Firebase Console
+        \n* Open the FirebasePigeon application
+        \n* Click on Notifications
+        \n* Create a new message. drop the advance options section and add Custom Data
+        \nkey="title" value="whatever"
+        \nkey="message" value="whatever"
+        \n* send message
+    </string>
 
     <string name="notification_title">Wisdom quote</string>
     <string name="notification_text">I am righ here, watching the wheels go round and round...</string>
