@@ -11,6 +11,7 @@
 
     <string name="intro">Practice app for Firebase Messaging Service.</string>
     <string name="btn_show_token">Show Token</string>
+    <string name="btn_test">Test it!</string>
     <string name="fb_instance_key">Firebase Instance Key</string>
     <string name="no_key_found">No Firebase instance key found</string>
 

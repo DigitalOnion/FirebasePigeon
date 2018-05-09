@@ -7,6 +7,8 @@ import android.content.Context;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
+import android.support.v4.app.NotificationCompat;
+import android.support.v4.app.NotificationManagerCompat;
 import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -52,6 +54,22 @@ public class MainActivity extends AppCompatActivity {
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle(R.string.fb_instance_key).setMessage(instanceKey).create().show();
+    }
+
+    public void onClickBtnTestIt(View view) {
+        String title = "Hola";
+        String message = "Hola Luis!";
+        Context context = this.getBaseContext();
+
+        String channelId = context.getString(R.string.channel_id);
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(context, channelId);
+        builder
+                .setSmallIcon(R.drawable.ic_android_black_24dp)
+                .setContentTitle(title)
+                .setContentText(message)
+                .setPriority(NotificationCompat.PRIORITY_HIGH);
+        NotificationManagerCompat manager = NotificationManagerCompat.from(context);
+        manager.notify(2, builder.build());
     }
 
 }

@@ -1,5 +1,7 @@
 package com.outerspace.firebasepigeon;
 
+import java.util.Map;
+
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 
@@ -19,11 +21,25 @@ public class MessagingService extends FirebaseMessagingService {
 
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
+        String keyTitle = PigeonBroadcastReceiver.TITLE;
+        String keyMessagee = PigeonBroadcastReceiver.MESSAGE;
+
         super.onMessageReceived(remoteMessage);
+        Map<String, String> data = remoteMessage.getData();
+        String title = null;
+        String message = null;
+        if(data.containsKey(keyTitle))
+            title = data.get(keyTitle);
+        if(data.containsKey(keyMessagee))
+            message = data.get(keyMessagee);
 
         Intent intent = new Intent();
         intent.setAction(PigeonBroadcastReceiver.ACTION_GET_NOTIFICATION);
-        intent.putExtra(PigeonBroadcastReceiver.TITLE, "Hola Luis!");
+        if(title != null)
+            intent.putExtra(keyTitle, title);
+        if(message != null)
+            intent.putExtra(keyMessagee, message);
+
         LocalBroadcastManager
                 .getInstance(getApplicationContext())
                 .sendBroadcast(intent);
